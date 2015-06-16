@@ -9,7 +9,6 @@
 
 #include "readset.h"
 #include "constructcontigset.h"
-#include "contigoverlap.h"
 
 ContigSet * GetContigFromContigSet(ContigSet * head, long int index){
     long int i = 0;
