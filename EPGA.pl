@@ -35,6 +35,10 @@ use strict;
 	}
 	
 	my @temp;
+	@temp = ("chmod +x bcalm dsk bless GetKmerHash JellyfishToDot parse_results SimplePathToGraph");
+	`@temp`;
+	
+	
 	for(my $k=0;$k<$library_number;$k++){
         my $output_prefix = "library_"."$k";
         @temp = ("./bless -read1 $library_name[$k*2] -read2 $library_name[$k*2+1] -prefix $output_prefix -kmerlength $kmer_length");
