@@ -75,7 +75,7 @@ use strict;
         $kmer_hash_count = $kmer_hash_count + $temp;
 	}
 	$kmer_hash_count = int($kmer_hash_count*1.2);
-	print TIME "$kmer_hash_count";
+	
 	my $all_kmer = "allkmer.dot";
 	my $kmer_hash = "kmerhash.b";
 	my $argument = $library_kmer[0].".dot";
