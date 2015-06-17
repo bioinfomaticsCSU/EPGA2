@@ -38,7 +38,9 @@ Create a main directory (eg:EPGA2). Copy all source code to this directory.
 
 Run command line: 
 ulimit -n 1100 //this command is used for BCALM 
+
 g++ main.cpp -o EPGA -lpthread 
+
 perl EPGA.pl library.txt kmerLength threadNumber
 
 Information about read libraries are stored in the file library.txt.
