@@ -31,13 +31,8 @@ use strict;
 		$library_std[$library_number]=$infor[3];
 		$library_orientation[$library_number]=$infor[4];
 		$library_kmer[$library_number] = "library_"."$library_number";
-		print "$library_name[$library_number*2]\n";
-		print "$library_name[$library_number*2+1]\n";
 		$library_number++;
 	}
-	
-	print "$kmer_length\n";
-	print "$thread_number\n";
 	
 	my @temp;
 	for(my $k=0;$k<$library_number;$k++){
@@ -53,7 +48,7 @@ use strict;
 	print TIME "DSK start--:";
 	print TIME scalar localtime;
 	print TIME "\n";
-	print "fffffff\n";
+
 	for(my $k=0;$k<$library_number;$k++){
 	    my $dsk_library_name = "dsk_library_name";
 		open(DSK, ">$dsk_library_name")or die $!;
@@ -109,7 +104,7 @@ use strict;
 	unlink "$dsk_library_name".".reads_binary";
 	unlink "$dsk_library_name".".solid_kmers_binary";
 	unlink $dsk_library_name;
-	print "bb\n";
+
 	$kmer_length = $kmer_length - 1;
 	
 	my $temp_output = "temp.dot";
@@ -132,9 +127,9 @@ use strict;
 	@temp = ("cat $simple_path |wc -l");
 	my $temp = `@temp`;
 	my $graph_node = int($temp);
-	print "graphnode-----$graph_node\n";
+
 	$kmer_length--;
-	print "kmerlength-----$kmer_length\n";
+
 	@temp = ("./SimplePathToGraph $simple_path $debruijn_graph $graph_node $kmer_length $thread_number");
 	`@temp`;
 	
@@ -142,7 +137,7 @@ use strict;
 	print TIME scalar localtime;
 	print TIME "\n";
 	$kmer_length++;
-	print "ddddddd\n";
+
 	$temp_file = $library_name[0].' '.$library_name[1].' '.$library_insertsize[0].' '.$library_std[0].' '.$library_orientation[0];
 	for(my $k=1;$k<$library_number;$k++){
         $temp_file = $temp_file.' '.$library_name[2*$k].' '.$library_name[2*$k+1].' '.$library_insertsize[$k].' '.$library_std[$k].' '.$library_orientation[$k];
