@@ -48,7 +48,7 @@ Information about read libraries are stored in the file library.txt.
 Each line represents one read library.
 The first column is the first mate read file (*.fastq), the sencond column is the second mate read file (*.fastq), the third column is insert size of read library, the fourth column is standard deviation of insert size, the fifth column represents whether the read library is mate-paired (0 denotes paired-end reads, 1 denotes mate-paired reads).
 
-kmerLength is one integer shorter than read length which is used for building De Bruijn graph.
+kmerLength is one integer (<32) shorter than read length which is used for building De Bruijn graph.
 
 threadNumber is thread number of program.
 
