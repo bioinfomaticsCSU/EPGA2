@@ -26,7 +26,7 @@ CHINA, 410083
 De Novo Assembler
 =================
 
-EPGA2 updates some modules in EPGA which can improve memory efficiency in genome asssembly.
+EPGA2 updates some modules in EPGA which can improve memory efficiency in genome asssembly (for read shorter than 50).
 
 1)Installing.
 
