@@ -26,7 +26,8 @@ CHINA, 410083
 De Novo Assembler
 =================
 
-EPGA2 updates some modules in EPGA which can improve memory efficiency in genome asssembly (for read shorter than 50).
+EPGA2 updates some modules in EPGA which can improve memory efficiency in genome asssembly.
+The read library for EPGA2 should be paired-end reads. Read length shorter than 50bp and coverage larger than 100.
 
 1)Installing.
 
