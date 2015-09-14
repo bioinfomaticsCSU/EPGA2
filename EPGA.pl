@@ -38,6 +38,9 @@ use strict;
 	@temp = ("chmod +x bcalm dsk bless GetKmerHash JellyfishToDot parse_results SimplePathToGraph");
 	`@temp`;
 	
+	@temp = ("ulimit -n 1100");
+	`@temp`;
+	
 	
 	for(my $k=0;$k<$library_number;$k++){
         my $output_prefix = "library_"."$k";
