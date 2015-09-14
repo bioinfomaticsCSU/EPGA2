@@ -1371,6 +1371,16 @@ void FillGap(ScaffoldSetHead * scaffoldSetHead, ReadSet * readSet, int setNumber
     long int i = 0;
     long int j = 0;
     
+    minKmerLength = kmerLength -4;
+	if(minKmerLength<=0){
+        minKmerLength = kmerLength;
+	}
+	maxKmerLength = kmerLength + 4;
+	if(maxKmerLength>32){
+	   maxKmerLength = kmerLength;
+	}
+    
+    
     FillGapP * fillGapP = new FillGapP[totalThreadNumber];
     GapRegionContigSet * gapRegionContigSet = new GapRegionContigSet[scaffoldSetHead->gapNumber];
     
