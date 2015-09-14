@@ -54,5 +54,6 @@ kmerLength is one integer (<32) shorter than read length which is used for build
 threadNumber is thread number of program.
 
 3)Output.
+
 There are two files "contigSetLong.fa" and "scaffoldLong.fa" corresponding to final contigs and scaffolds.
 
