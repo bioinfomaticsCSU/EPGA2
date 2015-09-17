@@ -1,0 +1,9 @@
+nohup: ignoring input
+Sorting m-mer counts
+236994 aaaaaaaaaa
+107846 aaaaaaacaa
+107585 aaaataaaaa
+initial partitioning done
+mv: cannot stat `.bcalmtmp/./data/ouput.dot': No such file or directory
+system call failed
+Last for 495 seconds
