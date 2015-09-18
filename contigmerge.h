@@ -895,7 +895,7 @@ void CompactContigSet(ContigSet * contigSet, char * file){
     
 }
 */
-ContigSet * ContigMerging(ContigSet * contigSet, DBGraph * deBruijnGraph, int kmerLength, ReadSet * readSet, int readSetCount, char * contigSetFile, int token){
+ContigSet * ContigMerging(ContigSet * contigSet, DBGraph * deBruijnGraph, int kmerLength, ReadSet * readSet, int readSetCount, char * contigSetFile, int threadNumber, int token){
     long int i = 0;
     long int j = 0;
     int count = 0;
@@ -910,10 +910,10 @@ ContigSet * ContigMerging(ContigSet * contigSet, DBGraph * deBruijnGraph, int km
     
     //cout<<"sssssssssssssssssssssssssss0000000000000000000000"<<endl;
     
-    RemoveSubContigs(contigSet,16);
+    RemoveSubContigs(contigSet,threadNumber);
     WriteContigSetLong(contigSet, contigSetNonIncludeFile);
     contigSet = GetContigSetLong(contigSetNonIncludeFile);
-    CompactContigs(contigSet,kmerLength,16);
+    CompactContigs(contigSet,kmerLength,threadNumber);
 
     //cout<<"ffffffffffffffffffffffffff"<<endl;
     //mapmerge(kmerLength, contigSet, contigSetNonIncludeFile, overlapInformationFile, 1,token);
