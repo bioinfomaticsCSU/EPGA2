@@ -73,11 +73,11 @@ int main(int argc, char *argv[])
     ContigSet * temp = contigSetHead->next;
     temp = contigSetHead->next;
 
-    contigSetHead->next = ContigMerging(contigSetHead->next, deBruijnGraphHead->deBruijnGraph, kmerLength, readSet, setNumber, str1,1);
+    contigSetHead->next = ContigMerging(contigSetHead->next, deBruijnGraphHead->deBruijnGraph, kmerLength, readSet, setNumber, str1,threadNumber,1);
     
     temp = contigSetHead->next;
     
-    contigSetHead->next = ContigMerging(contigSetHead->next, deBruijnGraphHead->deBruijnGraph, kmerLength, readSet, setNumber, str2,2);
+    contigSetHead->next = ContigMerging(contigSetHead->next, deBruijnGraphHead->deBruijnGraph, kmerLength, readSet, setNumber, str2,threadNumber,2);
     
     temp = contigSetHead->next;
     WriteContigSet(temp, str1);
