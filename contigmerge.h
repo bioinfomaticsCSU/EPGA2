@@ -251,7 +251,10 @@ void * CompactContigsThread(void * arg){
                         ocout<<i<<"	"<<j<<"	"<<p<<"	+	+"<<endl;      
                         compactIndex[i*contigNumber+j] = true;
                         compactIndex[j*contigNumber+i] = true;
+                        rightContigSet=rightContigSet->next;
+                        j++;
                         pthread_mutex_unlock(&mutexCompactContigs);
+			continue;
                     }
                     pthread_mutex_unlock(&mutexCompactContigs);
                     index = 0;
@@ -280,7 +283,10 @@ void * CompactContigsThread(void * arg){
                         ocout<<i<<"	"<<j<<"	"<<p<<"	-	+"<<endl;
                         compactIndex[i*contigNumber+j] = true;
                         compactIndex[j*contigNumber+i] = true;
+                        rightContigSet=rightContigSet->next;
+                        j++;
                         pthread_mutex_unlock(&mutexCompactContigs);
+			continue;
                     }
                     pthread_mutex_unlock(&mutexCompactContigs);
                     
@@ -310,7 +316,10 @@ void * CompactContigsThread(void * arg){
                         ocout<<i<<"	"<<j<<"	"<<p<<"	+	-"<<endl;
                         compactIndex[i*contigNumber+j] = true;
                         compactIndex[j*contigNumber+i] = true;
+                        rightContigSet=rightContigSet->next;
+                        j++;
                         pthread_mutex_unlock(&mutexCompactContigs);
+			continue;
                     }
                     compactIndex[i*contigNumber+j] = true;
                     compactIndex[j*contigNumber+i] = true;
