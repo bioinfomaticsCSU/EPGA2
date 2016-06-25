@@ -1,3 +1,8 @@
+Latest Version
+=========
+Please see the latest version of EPGA2:https://github.com/bioinfomaticsCSU/EPGA2.1
+
+
 License
 =========
 
