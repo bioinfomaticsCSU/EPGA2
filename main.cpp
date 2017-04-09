@@ -88,6 +88,15 @@ int main(int argc, char *argv[])
     
     FillGap(scaffoldSetHead, readSet, setNumber, kmerSetHashTableHead, kmerLength, threadNumber);
     
+    long int num = 0;
+    while(temp!=NULL){
+        num++;
+        temp = temp->next;
+    }
+    if(num > 4000){   
+        return 0;
+    }
+
     char * address0 = new char[30];
     strcpy(address0, "scaffold0.fa");
     WriteScaffoldSet(scaffoldSetHead, address0);
