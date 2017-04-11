@@ -151,7 +151,7 @@ use strict;
 	}
 	print TIME "$kmer_hash_count\n";
 	print TIME "$temp_file\n";
-	@temp = ("./EPGA $temp_file $debruijn_graph $kmer_hash $kmer_hash_count $kmer_length $thread_number");
+	@temp = ("MALLOC_CHECK_=1 ./EPGA $temp_file $debruijn_graph $kmer_hash $kmer_hash_count $kmer_length $thread_number");
 	`@temp`;
 	print TIME "end--:";
 	print TIME scalar localtime;
