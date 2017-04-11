@@ -44,7 +44,7 @@ int main(int argc, char *argv[])
         readSet[i].orientation = atoi(argv[i*5+5]);		
     }
         
-	InitReadSet(readSet, setNumber, threadNumber);
+	InitReadSet(readSet, setNumber, 1);
 
  
 	DBGraphHead * deBruijnGraphHead = new DBGraphHead;
@@ -86,7 +86,7 @@ int main(int argc, char *argv[])
     
     ScaffoldSetHead * scaffoldSetHead = ScaffoldingContigSet(temp, readSet, setNumber, 3*kmerLength, kmerLength, threadNumber);
     
-    FillGap(scaffoldSetHead, readSet, setNumber, kmerSetHashTableHead, kmerLength, threadNumber);
+    FillGap(scaffoldSetHead, readSet, setNumber, kmerSetHashTableHead, kmerLength, 1);
     
     long int num = 0;
     while(temp!=NULL){
@@ -109,7 +109,7 @@ int main(int argc, char *argv[])
     
     scaffoldSetHead = ScaffoldingContigSet(temp, readSet, setNumber, kmerLength, kmerLength, threadNumber);    
     
-    FillGap(scaffoldSetHead, readSet, setNumber, kmerSetHashTableHead, kmerLength, threadNumber); 
+    FillGap(scaffoldSetHead, readSet, setNumber, kmerSetHashTableHead, kmerLength, 1); 
     
     
 }
