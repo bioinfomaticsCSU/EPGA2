@@ -34,9 +34,9 @@ The read library for EPGA2 should be paired-end reads. Read length shorter than 
 EPGA is written C++ and therefore will require a machine with GNU C++ pre-installed.
 
 Create a main directory (eg:EPGA2). Copy all source code to this directory.
-```
-2)Running.
 
+2)Running.
+```
 Run command line: 
 
 ulimit -n 1100 //this command is used for BCALM 
@@ -56,6 +56,6 @@ threadNumber is thread number of program.
 3)Output.
 
 There are two files "contigSetLong.fa" and "scaffoldLong.fa" corresponding to final contigs and scaffolds.
-```
+
 4) Evaluation
 Please enter the directory GAGE for evaluating results, or use QUAST to evaluate assembly results.
