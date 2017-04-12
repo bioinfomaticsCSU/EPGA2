@@ -57,5 +57,6 @@ threadNumber is thread number of program.
 
 There are two files "contigSetLong.fa" and "scaffoldLong.fa" corresponding to final contigs and scaffolds.
 
-4) Evaluation
+4)Evaluation.
+
 Please enter the directory GAGE for evaluating results, or use QUAST to evaluate assembly results.
