@@ -1,8 +1,3 @@
-Latest Version
-=========
-Please see the latest version of EPGA2:https://github.com/bioinfomaticsCSU/EPGA2.1
-
-
 License
 =========
 
@@ -39,7 +34,7 @@ The read library for EPGA2 should be paired-end reads. Read length shorter than 
 EPGA is written C++ and therefore will require a machine with GNU C++ pre-installed.
 
 Create a main directory (eg:EPGA2). Copy all source code to this directory.
-
+```
 2)Running.
 
 Run command line: 
@@ -57,8 +52,10 @@ The first column is the first mate read file (*.fastq), the second column is the
 kmerLength is one integer (<32) shorter than read length which is used for building De Bruijn graph.
 
 threadNumber is thread number of program.
-
+```
 3)Output.
 
 There are two files "contigSetLong.fa" and "scaffoldLong.fa" corresponding to final contigs and scaffolds.
-
+```
+4) Evaluation
+Please enter the directory GAGE for evaluating results, or use QUAST to evaluate assembly results.
