@@ -87,15 +87,6 @@ int main(int argc, char *argv[])
     ScaffoldSetHead * scaffoldSetHead = ScaffoldingContigSet(temp, readSet, setNumber, 3*kmerLength, kmerLength, threadNumber);
     
     FillGap(scaffoldSetHead, readSet, setNumber, kmerSetHashTableHead, kmerLength, 1);
-    
-    long int num = 0;
-    while(temp!=NULL){
-        num++;
-        temp = temp->next;
-    }
-    if(num > 4000){   
-        return 0;
-    }
 
     char * address0 = new char[30];
     strcpy(address0, "scaffold0.fa");
